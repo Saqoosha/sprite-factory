@@ -152,10 +152,10 @@ module SpriteFactory
         elsif custom.include?('$IMAGE')
           custom.sub('$IMAGE', base)        # allow custom url with simple token replacement
         else
-          "url(#{File.join(custom, base)})" # allow custom url with simple prepend
+          "url('#{File.join(custom, base)}')" # allow custom url with simple prepend
         end
       else
-        "url(#{base})"                      # otherwise, just default to basename of the output image file
+        "url('#{base}')"                      # otherwise, just default to basename of the output image file
       end
     end
 

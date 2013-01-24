@@ -45,6 +45,20 @@ module SpriteFactory
 
     #----------------------------------------------------------------------------
 
+    def self.stylus(selector, name, attributes)
+      sass(selector, name, attributes)
+    end
+
+    def self.stylus_style(attributes)
+      sass_style(attributes)
+    end
+
+    def self.stylus_comment(comment)
+      css_comment(comment)
+    end
+
+    #----------------------------------------------------------------------------
+
     def self.generate(style_name, selector, url, images)
       styles = []
       images.each do |image|
