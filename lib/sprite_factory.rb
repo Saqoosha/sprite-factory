@@ -21,6 +21,7 @@ module SpriteFactory
   class << self
     attr_accessor :report
     attr_accessor :style
+    attr_accessor :margin
     attr_accessor :layout
     attr_accessor :library
     attr_accessor :selector

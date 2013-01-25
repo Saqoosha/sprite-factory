@@ -17,6 +17,7 @@ module SpriteFactory
       @input  = input.to_s[-1] == "/" ? input[0...-1] : input # gracefully ignore trailing slash on input directory name
       @config = config
       @config[:style]      ||= SpriteFactory.style    || :css
+      @config[:margin]     ||= SpriteFactory.margin
       @config[:layout]     ||= SpriteFactory.layout   || :horizontal
       @config[:library]    ||= SpriteFactory.library  || :rmagick
       @config[:selector]   ||= SpriteFactory.selector || 'img.'
